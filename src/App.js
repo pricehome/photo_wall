@@ -1,11 +1,14 @@
 import React from "react"
 import axios from "axios"
+
 import SearchBar from "./components/SearchBar"
-// import Collection from "./components/Collection"
 import ImageCard from "./components/ImageCard"
+import ApiLocal from "./module/ApiLocal"
 
 class App extends React.Component {
 	state = {images: []}
+
+	saveThisPicture = newPicture => ApiLocal.post(newPicture)
 
 	onSearchSubmit = term => {
 		axios
@@ -28,10 +31,14 @@ class App extends React.Component {
 		return (
 			<div>
 				<SearchBar userSubmit={this.onSearchSubmit} />
-				<span>Found: {this.state.images.length} images</span>
+				<span>Found:{this.state.images.length} images</span>
 				<div>
 					{this.state.images.map(img => (
-						<ImageCard key={img.id} image={img} />
+						<ImageCard
+							key={img.id}
+							image={img}
+							saveThisPicture={this.saveThisPicture}
+						/>
 					))}
 				</div>
 			</div>

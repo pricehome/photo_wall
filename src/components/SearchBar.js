@@ -12,6 +12,7 @@ class SearchBar extends React.Component {
 		this.props.userSubmit(this.state.val)
 		event.preventDefault()
 		console.log(this.state.val)
+		this.setState({val: ""})
 	}
 
 	render() {
@@ -19,7 +20,7 @@ class SearchBar extends React.Component {
 			<div>
 				<form onSubmit={this.onFormSubmit} className="flexContainer">
 					<label>
-						<h2>Image Search: </h2>
+						<h5>Image Search: </h5>
 					</label>
 					<input
 						className="inputStyle"
