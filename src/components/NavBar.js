@@ -1,8 +1,25 @@
-import React from "react"
-import AppBar from "material-ui/AppBar"
+import React, {Component} from "react"
 
-const Navbar = () => (
-	<AppBar title="Photo Loop" style={{background: "#2E3B55"}} />
-)
+export default class NavBar extends Component {
+	render() {
+		return (
+			<div>
+				<nav className="nav-wrapper teal">
+					<a href="/#" className="brand-logo">
+						PhotoLoops
+					</a>
 
-export default Navbar
+					<ul className="right">
+						<li>
+							<a href="/#">Home</a>
+						</li>
+						<li>
+							<a href="/#">Collection</a>
+						</li>
+					</ul>
+					<i class="material-icons">cached</i>
+				</nav>
+			</div>
+		)
+	}
+}

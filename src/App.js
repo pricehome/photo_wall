@@ -1,9 +1,9 @@
 import React from "react"
 import axios from "axios"
-
 import SearchBar from "./components/SearchBar"
 import ImageCard from "./components/ImageCard"
 import ApiLocal from "./module/ApiLocal"
+import NavBar from "./components/NavBar"
 
 class App extends React.Component {
 	state = {images: []}
@@ -30,6 +30,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
+				<NavBar />
 				<SearchBar userSubmit={this.onSearchSubmit} />
 				<span>Found:{this.state.images.length} images</span>
 				<div>
