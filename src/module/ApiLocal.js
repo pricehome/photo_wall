@@ -20,13 +20,22 @@ export default {
 			body: JSON.stringify(newPicture)
 		}).then(data => data.json())
 	},
-	put(editedPicture) {
-		return fetch(`${remoteURL}/pictures/${editedPicture.id}`, {
-			method: "PUT",
+
+	delete(pictureId) {
+		return fetch(`${remoteURL}/pictures/${pictureId}`, {
+			method: "DELETE",
 			headers: {
 				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(editedPicture)
-		}).then(data => data.json())
+			}
+		}).then(e => e.json())
 	}
+	// put(editedPicture) {
+	// 	return fetch(`${remoteURL}/pictures/${editedPicture.id}`, {
+	// 		method: "PUT",
+	// 		headers: {
+	// 			"Content-Type": "application/json"
+	// 		},
+	// 		body: JSON.stringify(editedPicture)
+	// 	}).then(data => data.json())
+	// }
 }

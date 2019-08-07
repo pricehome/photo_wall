@@ -1,9 +1,12 @@
 import React from "react"
+import {Route, Link, BrowserRouter as Router} from "react-router-dom"
 import axios from "axios"
 import SearchBar from "./components/SearchBar"
+import NavBar from "./components/NavBar"
 import ImageCard from "./components/ImageCard"
 import ApiLocal from "./module/ApiLocal"
-import NavBar from "./components/NavBar"
+import Collection from "./components/Collection"
+import PictureEdit from "./components/picture/PictureEdit"
 
 class App extends React.Component {
 	state = {images: []}
@@ -33,6 +36,22 @@ class App extends React.Component {
 				<NavBar />
 				<SearchBar userSubmit={this.onSearchSubmit} />
 				<span>Found:{this.state.images.length} images</span>
+				<React.Fragment>
+					<Route
+						exact
+						path="/collection"
+						render={props => {
+							return <Collection />
+						}}
+					/>
+					<Route
+						exact
+						path="/collection/pictureId(\d+)/edit"
+						render={props => {
+							return <PictureEdit {...props} />
+						}}
+					/>
+				</React.Fragment>
 				<div>
 					{this.state.images.map(img => (
 						<ImageCard

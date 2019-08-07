@@ -1,6 +1,7 @@
 import React, {Component} from "react"
+import {Link, withRouter} from "react-router-dom"
 
-export default class NavBar extends Component {
+class NavBar extends Component {
 	render() {
 		return (
 			<div>
@@ -11,15 +12,17 @@ export default class NavBar extends Component {
 
 					<ul className="right">
 						<li>
-							<a href="/#">Home</a>
+							<Link to="/#">Home</Link>
 						</li>
 						<li>
-							<a href="/#">Collection</a>
+							<Link to="/collection">Collection</Link>
 						</li>
 					</ul>
-					<i class="material-icons">cached</i>
+					<i className="material-icons">cached</i>
 				</nav>
 			</div>
 		)
 	}
 }
+
+export default withRouter(NavBar)
