@@ -55,16 +55,24 @@ class App extends React.Component {
 							return <PictureEdit {...props} editPicture={this.editPicture} />
 						}}
 					/>
+					<Route
+						exact
+						path="/"
+						render={props => {
+							return (
+								<div>
+									{this.state.images.map(img => (
+										<ImageCard
+											key={img.id}
+											image={img}
+											saveThisPicture={this.saveThisPicture}
+										/>
+									))}
+								</div>
+							)
+						}}
+					/>
 				</React.Fragment>
-				<div>
-					{this.state.images.map(img => (
-						<ImageCard
-							key={img.id}
-							image={img}
-							saveThisPicture={this.saveThisPicture}
-						/>
-					))}
-				</div>
 			</div>
 		)
 	}

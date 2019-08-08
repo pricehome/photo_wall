@@ -29,12 +29,16 @@ export default class ImageCard extends Component {
 								>
 									Save
 								</button>
-								<button className="waves-effect waves-black btn-flat">
+								{/* <button className="waves-effect waves-black btn-flat">
 									Delete
-								</button>
-								<button className="waves-effect waves-black btn-flat">
+								</button> */}
+								<a
+									target="blank"
+									href={`${this.props.image.links.html}/info`}
+									className="waves-effect waves-black btn-flat"
+								>
 									Info
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
