@@ -30,6 +30,10 @@ class App extends React.Component {
 			})
 	}
 
+	editPicture = updatedPicture => {
+		ApiLocal.put(updatedPicture)
+	}
+
 	render() {
 		return (
 			<div>
@@ -46,9 +50,9 @@ class App extends React.Component {
 					/>
 					<Route
 						exact
-						path="/collection/pictureId(\d+)/edit"
+						path="/collection/:pictureId(\d+)/edit"
 						render={props => {
-							return <PictureEdit {...props} />
+							return <PictureEdit {...props} editPicture={this.editPicture} />
 						}}
 					/>
 				</React.Fragment>

@@ -12,7 +12,7 @@ class NavBar extends Component {
 
 					<ul className="right">
 						<li>
-							<Link to="/#">Home</Link>
+							<Link to="/home">Home</Link>
 						</li>
 						<li>
 							<Link to="/collection">Collection</Link>

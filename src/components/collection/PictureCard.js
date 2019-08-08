@@ -10,7 +10,7 @@ export class PictureCard extends Component {
 
 				{
 					<a
-						href="/#"
+						href="/collection"
 						onClick={() => this.props.deletePicture(this.props.picture.id)}
 					>
 						Delete

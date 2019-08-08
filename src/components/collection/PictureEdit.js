@@ -20,17 +20,20 @@ export default class PictureEdit extends Component {
 
 	handleFieldChange = evt => {
 		const stateToChange = {}
-		stateToChange[evt.target.id] = evt.target.alt
+		stateToChange[evt.target.id] = evt.target.value
 		this.setState(stateToChange)
 	}
+
 	editThisPicture = evt => {
 		evt.preventDefault()
+		console.log("clicked edit")
 
 		const updatePicture = {
 			id: this.props.match.params.pictureId,
 			url: this.state.url,
 			alt: this.state.alt
 		}
+
 		this.props.editPicture(updatePicture)
 	}
 
@@ -39,8 +42,9 @@ export default class PictureEdit extends Component {
 			<React.Fragment>
 				<form>
 					<div>
+						<img src={this.state.url} alt={this.state.alt} />
+						<br />
 						<label htmlFor="taskName">Edit The Alt</label>
-						<img src={this.props.picture.url} alt={this.props.picture.alt} />
 						<input
 							type="text"
 							onChange={this.handleFieldChange}
@@ -48,6 +52,9 @@ export default class PictureEdit extends Component {
 							value={this.state.alt}
 						/>
 					</div>
+					<button type="button" onClick={this.editThisPicture}>
+						Save Edit
+					</button>
 				</form>
 			</React.Fragment>
 		)
