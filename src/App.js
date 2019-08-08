@@ -1,12 +1,12 @@
 import React from "react"
 import {Route, Link, BrowserRouter as Router} from "react-router-dom"
 import axios from "axios"
-import SearchBar from "./components/SearchBar"
-import NavBar from "./components/NavBar"
-import ImageCard from "./components/ImageCard"
+import SearchBar from "./components/search/SearchBar"
+import NavBar from "./components/nav/NavBar"
+import ImageCard from "./components/found/ImageCard"
 import ApiLocal from "./module/ApiLocal"
-import Collection from "./components/Collection"
-import PictureEdit from "./components/picture/PictureEdit"
+import Collection from "./components/collection/Collection"
+import PictureEdit from "./components/collection/PictureEdit"
 
 class App extends React.Component {
 	state = {images: []}

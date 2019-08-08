@@ -1,6 +1,6 @@
 import React, {Component} from "react"
-import ApiLocal from "../module/ApiLocal"
-import PictureCard from "../components/picture/PictureCard"
+import ApiLocal from "../../module/ApiLocal"
+import PictureCard from "./PictureCard"
 
 export class Collection extends Component {
 	state = {
