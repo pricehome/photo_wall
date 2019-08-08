@@ -20,7 +20,7 @@ export default class PictureEdit extends Component {
 
 	handleFieldChange = evt => {
 		const stateToChange = {}
-		stateToChange[evt.target.id] = evt.tartget.useDebugValue
+		stateToChange[evt.target.id] = evt.target.alt
 		this.setState(stateToChange)
 	}
 	editThisPicture = evt => {
@@ -40,6 +40,7 @@ export default class PictureEdit extends Component {
 				<form>
 					<div>
 						<label htmlFor="taskName">Edit The Alt</label>
+						<img src={this.props.picture.url} alt={this.props.picture.alt} />
 						<input
 							type="text"
 							onChange={this.handleFieldChange}
