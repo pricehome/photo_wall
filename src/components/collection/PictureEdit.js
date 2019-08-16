@@ -46,13 +46,18 @@ export default class PictureEdit extends Component {
 						<br />
 						<label htmlFor="taskName">Edit The Alt</label>
 						<input
+							className="waves-effect waves-black btn-flat"
 							type="text"
 							onChange={this.handleFieldChange}
 							id="alt"
 							value={this.state.alt}
 						/>
 					</div>
-					<button type="button" onClick={this.editThisPicture}>
+					<button
+						className="waves-effect waves-black btn-flat"
+						type="button"
+						onClick={this.editThisPicture}
+					>
 						Save Edit
 					</button>
 				</form>

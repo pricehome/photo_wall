@@ -7,17 +7,23 @@ export class PictureCard extends Component {
 			<div key={this.props.picture.id}>
 				<img src={this.props.picture.url} alt={this.props.picture.alt} />
 				<h5>{this.props.picture.alt}</h5>
-
-				{
-					<a
-						href="/collection"
-						onClick={() => this.props.deletePicture(this.props.picture.id)}
-					>
-						Delete
-					</a>
-				}
 				<div>
-					<Link to={`/collection/${this.props.picture.id}/edit`}>Edit</Link>
+					{
+						<a
+							className="waves-effect waves-black btn-flat"
+							href="/collection"
+							onClick={() => this.props.deletePicture(this.props.picture.id)}
+						>
+							Delete
+						</a>
+					}
+
+					<Link
+						to={`/collection/${this.props.picture.id}/edit`}
+						className="waves-effect waves-black btn-flat"
+					>
+						Edit
+					</Link>
 				</div>
 			</div>
 		)

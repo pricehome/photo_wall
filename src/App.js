@@ -7,6 +7,7 @@ import ImageCard from "./components/found/ImageCard"
 import ApiLocal from "./module/ApiLocal"
 import Collection from "./components/collection/Collection"
 import PictureEdit from "./components/collection/PictureEdit"
+import "./App.css"
 
 class App extends React.Component {
 	state = {images: []}
