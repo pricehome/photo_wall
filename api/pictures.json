@@ -1,11 +1,6 @@
 {
   "pictures": [
     {
-      "id": 60,
-      "url": "https://images.unsplash.com/photo-1522660517748-2931a7a4aaf6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjg0MzAyfQ",
-      "alt": "man standing"
-    },
-    {
       "id": 61,
       "url": "https://images.unsplash.com/photo-1558622561-55c85436f2c2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjg0MzAyfQ",
       "alt": "Cross"
@@ -19,6 +14,11 @@
       "id": 63,
       "url": "https://images.unsplash.com/photo-1525466760727-1d8be8721154?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjg0MzAyfQ",
       "alt": "umbrellas"
+    },
+    {
+      "id": 64,
+      "url": "https://images.unsplash.com/photo-1490650404312-a2175773bbf5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjg0MzAyfQ",
+      "alt": "shallow focus "
     }
   ]
 }
